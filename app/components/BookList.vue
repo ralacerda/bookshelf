@@ -6,12 +6,6 @@ const props = defineProps<{
   name: string;
   books: Book[];
 }>();
-
-const sortOrder: Record<BookStatus, number> = {
-  Recommended: 0,
-  Read: 1,
-  Started: 2,
-};
 </script>
 
 <template>
