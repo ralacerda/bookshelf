@@ -1,0 +1,41 @@
+{
+  "$schema": "https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json",
+  "backend": {
+    "name": "github",
+    "repo": "ralacerda/bookshelf",
+    "branch": "main"
+  },
+  "media_folder": "public/media",
+  "collections": [
+    {
+      "label": "Books",
+      "name": "books",
+      "folder": "data/books",
+      "create": true,
+      "format": "yaml",
+      "fields": [
+        {
+          "label": "Category",
+          "name": "category",
+          "widget": "select",
+          "options": ["Technical", "Non-Fiction", "Fiction"]
+        },
+        {
+          "label": "Status",
+          "name": "status",
+          "widget": "select",
+          "options": ["Recommended", "Read", "Started"]
+        },
+        { "label": "Title", "name": "title", "widget": "string" },
+        { "label": "Author", "name": "author", "widget": "string" },
+        { "label": "Year of publish", "name": "year", "widget": "number" },
+        {
+          "label": "Cover Image",
+          "name": "cover_image",
+          "widget": "image",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
