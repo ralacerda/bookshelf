@@ -6,11 +6,12 @@
     "branch": "main"
   },
   "media_folder": "public/media",
+  "public_folder": "media/",
   "collections": [
     {
       "label": "Books",
       "name": "books",
-      "folder": "data/books",
+      "folder": "content/books",
       "create": true,
       "format": "yaml",
       "fields": [
