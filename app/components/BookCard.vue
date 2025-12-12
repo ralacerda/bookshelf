@@ -1,0 +1,99 @@
+<script setup lang="ts">
+import Badge from "./Badge.vue";
+import type { Book } from "~/booksSchema";
+
+defineProps<{
+  book: Book;
+}>();
+</script>
+
+<template>
+  <li class="book-card">
+    <div class="badge">
+      <Badge :status="book.status" />
+    </div>
+    <div class="book-info">
+      <h3>{{ book.title }}</h3>
+      <p class="book-author">{{ book.author }}</p>
+      <p class="book-details">
+        {{ book.year }}
+      </p>
+    </div>
+    <div class="book-cover">
+      <img :alt="book.title" :src="book.cover_image" :height="230" />
+    </div>
+  </li>
+</template>
+
+<style scoped>
+.book-card {
+  border-radius: 3px;
+  background-color: var(--card-background);
+  width: 260px;
+  padding: 1.2rem 1rem;
+  display: grid;
+  position: relative;
+  isolation: isolate;
+}
+
+.book-card h3 {
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.book-info p {
+  margin-top: 0.6rem;
+  line-height: 1;
+}
+
+.book-info p + p {
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.book-details {
+  font-size: 0.875rem;
+}
+
+.book-cover img {
+  border-radius: 0 6px 6px 0;
+  box-shadow: 0.9px 0.9px 1px rgba(0, 0, 0, 0.04),
+    7px 7px 8px rgba(0, 0, 0, 0.08);
+}
+
+.book-cover {
+  align-self: self-end;
+  position: relative;
+  height: 230px;
+  width: 155px;
+}
+
+img {
+  object-fit: cover;
+  object-position: 10% 0;
+}
+
+.book-cover::after {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  content: "";
+  top: 0;
+  left: 0;
+  backdrop-filter: brightness(107%);
+}
+
+.badge {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  padding: 1.5rem;
+  width: 1em;
+  top: -5%;
+  left: 47%;
+  border-radius: 100%;
+  z-index: -2;
+  opacity: 0.15;
+}
+</style>
