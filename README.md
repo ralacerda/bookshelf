@@ -1,75 +1,23 @@
-# Nuxt Minimal Starter
+# Bookshelf
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the source code for my personal project where I list and share books I've read, started, and recommend to others. The website features a user-friendly interface where you can browse through various book cards, each containing the book's title, author(s) name, year of first publishing, and an image of the cover.
 
-## Setup
+## Tools
 
-Make sure to install dependencies:
+The website is built using Nuxt 4, a powerful Vue.js framework known for its performance and developer experience. For content management, I use Nuxt Content to handle data via YAML files, paired with Sveltia CMS to provide a user-friendly editing interface.
 
-```bash
-# npm
-npm install
+I use TypeScript and Zod to ensure type safety and validate the data schema. This combination provides robustness and reliability, ensuring that the book data structure remains consistent.
 
-# pnpm
-pnpm install
+Using these tools, I was able to build a responsive and dynamic website that allows me to easily add new books, update existing ones, and showcase my book collection in an organized and visually appealing way.
 
-# yarn
-yarn install
+## Deployment
 
-# bun
-bun install
-```
+The project is deployed on Firebase Hosting. A CI/CD pipeline is set up to automatically build and deploy the application whenever changes are pushed to the main branch.
 
-## Development Server
+## Screenshots
 
-Start the development server on `http://localhost:3000`:
+![Screenshot](project_screenshot.png)
 
-```bash
-# npm
-npm run dev
+## Credits
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+books (favicon) by Jakub Čaja from <a href="https://thenounproject.com/browse/icons/term/books/" target="_blank" title="books Icons">Noun Project</a>
