@@ -1,5 +1,10 @@
 # Bookshelf
 
+https://bookshelf.renatolacerda.com/
+
+![Screenshot](project_screenshot.png)
+
+
 This is the source code for my personal project where I list and share books I've read, started, and recommend to others. The website features a user-friendly interface where you can browse through various book cards, each containing the book's title, author(s) name, year of first publishing, and an image of the cover.
 
 ## Tools
@@ -13,10 +18,6 @@ Using these tools, I was able to build a responsive and dynamic website that all
 ## Deployment
 
 The project is deployed on Firebase Hosting. A CI/CD pipeline is set up to automatically build and deploy the application whenever changes are pushed to the main branch.
-
-## Screenshots
-
-![Screenshot](project_screenshot.png)
 
 ## Credits
 
